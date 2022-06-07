@@ -1,48 +1,48 @@
-/// updated : 1654188521263
-/// cases : 533756272
-/// todayCases : 350824
-/// deaths : 6316435
-/// todayDeaths : 748
-/// recovered : 504689276
-/// todayRecovered : 404013
-/// active : 22750561
-/// critical : 36668
-/// casesPerOneMillion : 68476
-/// deathsPerOneMillion : 810.3
-/// tests : 6455215471
-/// testsPerOneMillion : 814068.68
-/// population : 7929571108
+/// updated : 1654593605160
+/// cases : 536026111
+/// todayCases : 206463
+/// deaths : 6321795
+/// todayDeaths : 315
+/// recovered : 507178935
+/// todayRecovered : 375119
+/// active : 22525381
+/// critical : 36597
+/// casesPerOneMillion : 68767
+/// deathsPerOneMillion : 811
+/// tests : 6470334005
+/// testsPerOneMillion : 815869.78
+/// population : 7930596528
 /// oneCasePerPeople : 0
 /// oneDeathPerPeople : 0
 /// oneTestPerPeople : 0
-/// activePerOneMillion : 2869.08
-/// recoveredPerOneMillion : 63646.48
-/// criticalPerOneMillion : 4.62
+/// activePerOneMillion : 2840.31
+/// recoveredPerOneMillion : 63952.18
+/// criticalPerOneMillion : 4.61
 /// affectedCountries : 230
 
 class WorldStateModel {
   WorldStateModel({
-      int? updated,
-      int? cases,
-      int? todayCases,
-      int? deaths,
-      int? todayDeaths,
-      int? recovered,
-      int? todayRecovered,
-      int? active,
-      int? critical,
-      int? casesPerOneMillion,
-      double? deathsPerOneMillion,
-      int? tests,
-      double? testsPerOneMillion,
-      int? population,
-      int? oneCasePerPeople,
-      int? oneDeathPerPeople,
-      int? oneTestPerPeople,
-      double? activePerOneMillion,
-      double? recoveredPerOneMillion,
-      double? criticalPerOneMillion,
-      int? affectedCountries,}){
+    int? updated,
+    int? cases,
+    int? todayCases,
+    int? deaths,
+    int? todayDeaths,
+    int? recovered,
+    int? todayRecovered,
+    int? active,
+    int? critical,
+    int? casesPerOneMillion,
+    int? deathsPerOneMillion,
+    int? tests,
+    double? testsPerOneMillion,
+    int? population,
+    int? oneCasePerPeople,
+    int? oneDeathPerPeople,
+    int? oneTestPerPeople,
+    double? activePerOneMillion,
+    double? recoveredPerOneMillion,
+    double? criticalPerOneMillion,
+    int? affectedCountries,}){
     _updated = updated;
     _cases = cases;
     _todayCases = todayCases;
@@ -64,7 +64,7 @@ class WorldStateModel {
     _recoveredPerOneMillion = recoveredPerOneMillion;
     _criticalPerOneMillion = criticalPerOneMillion;
     _affectedCountries = affectedCountries;
-}
+  }
 
   WorldStateModel.fromJson(dynamic json) {
     _updated = json['updated'];
@@ -99,7 +99,7 @@ class WorldStateModel {
   int? _active;
   int? _critical;
   int? _casesPerOneMillion;
-  double? _deathsPerOneMillion;
+  int? _deathsPerOneMillion;
   int? _tests;
   double? _testsPerOneMillion;
   int? _population;
@@ -110,49 +110,49 @@ class WorldStateModel {
   double? _recoveredPerOneMillion;
   double? _criticalPerOneMillion;
   int? _affectedCountries;
-WorldStateModel copyWith({  int? updated,
-  int? cases,
-  int? todayCases,
-  int? deaths,
-  int? todayDeaths,
-  int? recovered,
-  int? todayRecovered,
-  int? active,
-  int? critical,
-  int? casesPerOneMillion,
-  double? deathsPerOneMillion,
-  int? tests,
-  double? testsPerOneMillion,
-  int? population,
-  int? oneCasePerPeople,
-  int? oneDeathPerPeople,
-  int? oneTestPerPeople,
-  double? activePerOneMillion,
-  double? recoveredPerOneMillion,
-  double? criticalPerOneMillion,
-  int? affectedCountries,
-}) => WorldStateModel(  updated: updated ?? _updated,
-  cases: cases ?? _cases,
-  todayCases: todayCases ?? _todayCases,
-  deaths: deaths ?? _deaths,
-  todayDeaths: todayDeaths ?? _todayDeaths,
-  recovered: recovered ?? _recovered,
-  todayRecovered: todayRecovered ?? _todayRecovered,
-  active: active ?? _active,
-  critical: critical ?? _critical,
-  casesPerOneMillion: casesPerOneMillion ?? _casesPerOneMillion,
-  deathsPerOneMillion: deathsPerOneMillion ?? _deathsPerOneMillion,
-  tests: tests ?? _tests,
-  testsPerOneMillion: testsPerOneMillion ?? _testsPerOneMillion,
-  population: population ?? _population,
-  oneCasePerPeople: oneCasePerPeople ?? _oneCasePerPeople,
-  oneDeathPerPeople: oneDeathPerPeople ?? _oneDeathPerPeople,
-  oneTestPerPeople: oneTestPerPeople ?? _oneTestPerPeople,
-  activePerOneMillion: activePerOneMillion ?? _activePerOneMillion,
-  recoveredPerOneMillion: recoveredPerOneMillion ?? _recoveredPerOneMillion,
-  criticalPerOneMillion: criticalPerOneMillion ?? _criticalPerOneMillion,
-  affectedCountries: affectedCountries ?? _affectedCountries,
-);
+  WorldStateModel copyWith({  int? updated,
+    int? cases,
+    int? todayCases,
+    int? deaths,
+    int? todayDeaths,
+    int? recovered,
+    int? todayRecovered,
+    int? active,
+    int? critical,
+    int? casesPerOneMillion,
+    int? deathsPerOneMillion,
+    int? tests,
+    double? testsPerOneMillion,
+    int? population,
+    int? oneCasePerPeople,
+    int? oneDeathPerPeople,
+    int? oneTestPerPeople,
+    double? activePerOneMillion,
+    double? recoveredPerOneMillion,
+    double? criticalPerOneMillion,
+    int? affectedCountries,
+  }) => WorldStateModel(  updated: updated ?? _updated,
+    cases: cases ?? _cases,
+    todayCases: todayCases ?? _todayCases,
+    deaths: deaths ?? _deaths,
+    todayDeaths: todayDeaths ?? _todayDeaths,
+    recovered: recovered ?? _recovered,
+    todayRecovered: todayRecovered ?? _todayRecovered,
+    active: active ?? _active,
+    critical: critical ?? _critical,
+    casesPerOneMillion: casesPerOneMillion ?? _casesPerOneMillion,
+    deathsPerOneMillion: deathsPerOneMillion ?? _deathsPerOneMillion,
+    tests: tests ?? _tests,
+    testsPerOneMillion: testsPerOneMillion ?? _testsPerOneMillion,
+    population: population ?? _population,
+    oneCasePerPeople: oneCasePerPeople ?? _oneCasePerPeople,
+    oneDeathPerPeople: oneDeathPerPeople ?? _oneDeathPerPeople,
+    oneTestPerPeople: oneTestPerPeople ?? _oneTestPerPeople,
+    activePerOneMillion: activePerOneMillion ?? _activePerOneMillion,
+    recoveredPerOneMillion: recoveredPerOneMillion ?? _recoveredPerOneMillion,
+    criticalPerOneMillion: criticalPerOneMillion ?? _criticalPerOneMillion,
+    affectedCountries: affectedCountries ?? _affectedCountries,
+  );
   int? get updated => _updated;
   int? get cases => _cases;
   int? get todayCases => _todayCases;
@@ -163,7 +163,7 @@ WorldStateModel copyWith({  int? updated,
   int? get active => _active;
   int? get critical => _critical;
   int? get casesPerOneMillion => _casesPerOneMillion;
-  double? get deathsPerOneMillion => _deathsPerOneMillion;
+  int? get deathsPerOneMillion => _deathsPerOneMillion;
   int? get tests => _tests;
   double? get testsPerOneMillion => _testsPerOneMillion;
   int? get population => _population;

@@ -46,8 +46,8 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
               ),
               FutureBuilder<WorldStateModel>(
                 future: worldStateService.fetchWorldRecords(),
-                builder: (context, snapshot) {
-    // builder: (context, Asyncsnapshot<WorldStateModel>snapshot) {
+                // builder: (context, snapshot) {
+                builder: (context, AsyncSnapshot<WorldStateModel> snapshot) {
                   if (!snapshot.hasData) {
                     return Expanded(
                       flex: 1,
@@ -105,7 +105,8 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
                                     value: snapshot.data!.cases!.toString()),
                                 ReusableRow(
                                     title: 'Recovered',
-                                    value: snapshot.data!.recovered!.toString()),
+                                    value:
+                                        snapshot.data!.recovered!.toString()),
                                 ReusableRow(
                                     title: 'Deaths',
                                     value: snapshot.data!.deaths!.toString()),
@@ -117,17 +118,23 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
                                     value: snapshot.data!.critical!.toString()),
                                 ReusableRow(
                                     title: 'Today Deaths',
-                                    value: snapshot.data!.todayDeaths!.toString()),
+                                    value:
+                                        snapshot.data!.todayDeaths!.toString()),
                                 ReusableRow(
                                     title: 'Today Recovered',
-                                    value: snapshot.data!.todayRecovered!.toString()),
+                                    value: snapshot.data!.todayRecovered!
+                                        .toString()),
                               ],
                             ),
                           ),
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const CountriesList(),),);
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const CountriesList(),
+                              ),
+                            );
                           },
                           child: Container(
                             height: 50,
